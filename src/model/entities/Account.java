@@ -6,7 +6,7 @@ public class Account {
 
 	private Integer number;
 	private String holder;
-	private Double balance = 0.0;
+	private Double balance;
 	private Double withdrawLimit;
 	
 	public Account() {
@@ -15,6 +15,7 @@ public class Account {
 	public Account(Integer number, String holder, Double initialBalance, Double withdrawLimit) {
 		this.number = number;
 		this.holder = holder;
+		this.balance = initialBalance;
 		this.withdrawLimit = withdrawLimit;
 		deposit(initialBalance);
 	}
